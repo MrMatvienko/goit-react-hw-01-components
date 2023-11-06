@@ -1,0 +1,16 @@
+.item {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  background-color: aliceblue;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+.name {
+  font-weight: bold;
+}
