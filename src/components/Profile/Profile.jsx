@@ -1,41 +1,29 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
 
-// export const Profile = ({ username, avatar, tag, location, stats }) => {
-//   return (
-//     <ProfileCard>
-//       <Describtion>
-//         <Avatar src={avatar} alt="User avatar" />
-//         <Name>{username}</Name>
-//         <Tag>{tag}</Tag>
-//         <Location>{location}</Location>
-//       </Describtion>
-//       <StatsList>
-//         <StatsItem>
-//           <Label>Followers</Label>
-//           <Quantity>{stats.followers}</Quantity>
-//         </StatsItem>
-//         <StatsItem>
-//           <Label>Views</Label>
-//           <Quantity>{stats.views}</Quantity>
-//         </StatsItem>
-//         <StatsItem>
-//           <Label>Likes</Label>
-//           <Quantity>{stats.likes}</Quantity>
-//         </StatsItem>
-//       </StatsList>
-//     </ProfileCard>
-//   );
-// };
+export const Profile = ({ user }) => {
+  return (
+    <div class="profile">
+      <div class="description">
+        <img src={user.avatar} alt="User avatar" class="avatar" />
+        <p class="name">{user.username}</p>
+        <p class="tag">@{user.tag}</p>
+        <p class="location">{user.location}</p>
+      </div>
 
-// Profile.propTypes = {
-//   username: PropTypes.string.isRequired,
-//   avatar: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   stats: PropTypes.shape({
-//     followers: PropTypes.number.isRequired,
-//     views: PropTypes.number.isRequired,
-//     likes: PropTypes.number.isRequired,
-//   }).isRequired,
-// };
+      <ul class="stats">
+        <li>
+          <span class="label">Followers</span>
+          <span class="quantity">{user.stats.followers}</span>
+        </li>
+        <li>
+          <span class="label">Views</span>
+          <span class="quantity">{user.stats.views}</span>
+        </li>
+        <li>
+          <span class="label">Likes</span>
+          <span class="quantity">{user.stats.likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
